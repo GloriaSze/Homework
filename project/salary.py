@@ -10,7 +10,6 @@
 #在51job网站上，爬取2020年发布的Python开发工程师的职位的薪酬，计算北京地区改职位的平均薪酬；
 import urllib.request
 import re
-import threading
 from concurrent.futures import ThreadPoolExecutor
 
 def get_html(page):
@@ -53,8 +52,8 @@ def crawler(page):
             if "北京" in j[1]:
                 salary.append(j[4])
     
-    for i in salary:
-        print(i)
+    #for i in salary:
+    #    print(i)
 
     print("爬取完毕！")
 
